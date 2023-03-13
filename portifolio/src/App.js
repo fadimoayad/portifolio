@@ -3,6 +3,7 @@ import {BrowserRouter, Routes ,Route } from "react-router-dom";
 import Main from './Main';
 import { useState, useEffect } from 'react';
 import NavBar from './Navbar';
+import ContactUs from './ContactUs';
 function App() {
   const [theme,setTheme] = useState("light");
 
@@ -28,6 +29,7 @@ function App() {
       <BrowserRouter>
       <Routes>
         <Route path='/' element={<Main />} />
+        <Route path='/ContactUs' element={<ContactUs />} />
       </Routes>
       </BrowserRouter>
     </div>

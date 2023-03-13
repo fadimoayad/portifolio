@@ -1,5 +1,5 @@
 import React from 'react';
-
+import ContactUs from './ContactUs';
 function NavBar(props){
     return (
         <div className="flex  top-0 left-0  bg-opacity-10 ">
@@ -7,7 +7,7 @@ function NavBar(props){
             <li ><a className=" hover:text-yellow-600 " >Home</a></li>
             <li ><a className=" hover:text-yellow-600" >About Me</a></li>
             <li ><a className=" hover:text-yellow-600" >PROJECTS</a></li>
-            <li ><a className=" hover:text-yellow-600" >CONTACT</a></li>
+            <li ><a href={<ContactUs />} className=" hover:text-yellow-600" >CONTACT</a></li>
             <li ><a className=" hover:text-yellow-600" >RESUME</a></li>
             <li onClick={props.handleTheme}><a>dark</a></li>
         </ul>

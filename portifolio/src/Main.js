@@ -7,9 +7,10 @@ function Main(){
             
         </div>
 
-        <div className="fad rounded-full w-48 h-48 mt-100">
+        <div className="fad absolute rounded-full w-48 h-48 bottom-0 left-24">
             
             </div>
+
        </div>
     )
 }
