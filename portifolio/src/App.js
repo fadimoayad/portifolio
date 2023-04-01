@@ -12,7 +12,6 @@ function App() {
       document.documentElement.classList.add("dark");
     }else{
       document.documentElement.classList.remove("dark");
-
     }
 
   } , [theme]);
@@ -23,15 +22,10 @@ function App() {
 
 
   return (
-    <div className="bg-white dark:bg-black h-screen">    
+    <div className="bg-lightGray dark:bg-black  h-screen w-screen dark:text-white text-black">    
       <NavBar handleTheme={handleTheme}/>
 
-      <BrowserRouter>
-      <Routes>
-        <Route path='/' element={<Main />} />
-        <Route path='/ContactUs' element={<ContactUs />} />
-      </Routes>
-      </BrowserRouter>
+  
     </div>
   )
 }

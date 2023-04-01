@@ -3,6 +3,7 @@
   "version": "0.1.0",
   "private": true,
   "dependencies": {
+    "@emailjs/browser": "^3.10.0",
     "@firebase/auth": "^0.21.0",
     "@headlessui/react": "^1.7.7",
     "@reduxjs/toolkit": "^1.8.1",
@@ -11,7 +12,7 @@
     "@testing-library/user-event": "^14.1.1",
     "dotenv": "^16.0.3",
     "dotenv-webpack": "^8.0.1",
-    "firebase": "^9.17.2",
+    "firebase": "^9.18.0",
     "react": "^18.2.0",
     "react-bootstrap": "^2.7.0",
     "react-dom": "^18.2.0",
@@ -35,7 +36,6 @@
     "lint:fix": "eslint --fix",
     "format": "prettier --write './**/*.{js,jsx,ts,tsx,css,md,json}' --config ./.prettierrc.json"
   },
-  
   "browserslist": {
     "production": [
       ">0.2%",

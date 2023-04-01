@@ -1,17 +1,27 @@
 import React from 'react';
+import { Route, Routes, Link, Router, BrowserRouter } from 'react-router-dom';
+import Main from './Main';
 import ContactUs from './ContactUs';
+import About from './About';
 function NavBar(props){
     return (
-        <div className="flex  top-0 left-0  bg-opacity-10 ">
-        <ul className="flex  text-center gap-4 ml-4">
-            <li ><a className=" hover:text-yellow-600 " >Home</a></li>
-            <li ><a className=" hover:text-yellow-600" >About Me</a></li>
-            <li ><a className=" hover:text-yellow-600" >PROJECTS</a></li>
-            <li ><a href={<ContactUs />} className=" hover:text-yellow-600" >CONTACT</a></li>
-            <li ><a className=" hover:text-yellow-600" >RESUME</a></li>
-            <li onClick={props.handleTheme}><a>dark</a></li>
-        </ul>
-    </div>
+        <BrowserRouter>
+        <nav className="flex pr-2 pl-8  gap-4 py-2 bg-black  dark:bg-lightGray text-white  dark:text-black">
+        
+            <Link to="/" className=" hover:text-yellow-600 ">Home</Link>
+            <Link to="About" className=" hover:text-yellow-600" >About</Link>
+            <Link to="ContactUs" className=" hover:text-yellow-600" >Contact</Link>
+            <Link className=" hover:text-yellow-600" >Resume</Link>
+            
+        <div onClick={props.handleTheme} className="ml-auto	"><a>dark</a></div>
+      
+    </nav>
+       <Routes>
+            <Route path='/' element=""></Route>
+            <Route path="/ContactUs" element={<ContactUs />}></Route>
+            <Route path="/About" element={<About />}></Route>
+        </Routes> 
+        </BrowserRouter>
     )
 }
 
