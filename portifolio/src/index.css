@@ -20,11 +20,14 @@
 .fad{
 box-shadow:
 inset 0px 0px 50px white ,
-inset 20px 0 80px yellow ,
-inset -20px 0 80px yellow,
-inset 20px 0 300px yellow,
-inset -20px 0 300px yellow,
+inset 120px 0 80px yellow ,
+inset -120px 0 80px yellow,
+inset 120px 0 300px yellow,
+inset -120px 0 300px yellow,
  0 0 50px white,
  10px 0 80px yellow,
  -10px 0 80px yellow
+}
+.ed{
+    background: rgba(255, 184, 0, 0.55);
 }

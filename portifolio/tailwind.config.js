@@ -8,7 +8,10 @@ module.exports = {
   theme: {
     extend: {
        colors: {
-      "lightGray":'#D9D9D9'
+      "lightGray":'#D9D9D9',
+      "azureBlue":'#37A2DE',
+      'olive':'#748666',
+      'redShade':'#C72828'
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],

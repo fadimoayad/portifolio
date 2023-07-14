@@ -5,32 +5,6 @@ import emailjs from '@emailjs/browser';
 import { db } from './firebase';
 
 function ContactUs(){
-// const [name, setName]= useState("");
-// const [Email, setEmail]= useState("");
-// const [Message, setMesaage]= useState("");
-
-// const coll=collection(db, "contacts")
-
-// const HandleSubmit=(e)=>{
-//     e.preventDefault();
-//     addDoc(coll,{
-//         name:name,
-//         Email:Email,
-//         Message:Message,
-//     })
-// .then(()=>{
-//     alert("message has been sent")
-// })
-// .catch((err)=>{
-//     alert(err.message)
-// })
-
-// setName("")
-// setMesaage("")
-// setEmail("")
-// }
-
-
 const form = useRef();
 
   const sendEmail = (e) => {
@@ -47,28 +21,42 @@ const form = useRef();
   };
 
     return(
-        <div className="dark:bg-black bg-lightGray">
-           
-        <form className='flex flex-col items-center justify-center z-0' ref={form} onSubmit={sendEmail}>
-            <h1 className='text-8xl mt-8 mb-4 font-normal leading-[147px]'>CONTACT ME</h1>
-            <input type="text" name="user_name" placeholder='Your Name...'  className='w-3/4 rounded-xl m-2.5 p-4 z-10 bg-lightGray' /*value={name}
+       
+        <div className="flex  relative dark:bg-black bg-lightGray h-full w-full overflow-hidden ">
+                   
+            <div className='bg-redShade absolute bg-opacity-80 z-0 w-[817px] h-[488px] top-80 left-32 blur-[78px] rounded-full overflow-hidden'> </div>  
+
+            <div className='bg-olive absolute bg-opacity-80 z-0 w-[717px] h-[388px] top-96 left-[480px] blur-[78px] rounded-full overflow-hidden'> </div>  
+
+            <div className='ed absolute z-0 w-[664px] h-[400px] top-[230px] left-[690px] blur-[78px] rounded-full overflow-hidden'> </div>  
+
+            <div className='bg-azureBlue bg-opacity-80 absolute z-0 w-[544px] h-[290px] top-80 left-10 blur-[78px] rounded-full overflow-hidden'> </div>        
+
+        <form className='flex flex-col items-center justify-center z-10 mb-14 ' ref={form} onSubmit={sendEmail}>
+
+            <h1 className='text-8xl mt-8 mb-10 font-normal leading-[147px]'>CONTACT ME</h1>
+            <input type="text" name="user_name" placeholder='Your Name...'  className='w-4/5 rounded-xl m-2.5 p-4 z-10 bg-lightGray' /*value={name}
             onChange={(e)=> setName(e.target.value) }*//> 
 
-            <input type="email" name="user_email" placeholder='Your Email...'  className='w-3/4 rounded-xl m-2.5 p-4 z-10 bg-lightGray' />
+            <input type="email" name="user_email" placeholder='Your Email...'  className='w-4/5 rounded-xl m-2.5 p-4 z-10 bg-lightGray' />
 
-            <textarea placeholder='Your Message...' name='message' className='w-3/4 rounded-2xl m-2.5 pb-36 pl-4 z-10 pt-4 bg-lightGray'></textarea>
+            <textarea placeholder='Your Message...' name='message' className='w-4/5 rounded-2xl m-2.5 pb-36 pl-4 z-10 pt-4 bg-lightGray'></textarea>
 
-            <button type='submit' className='bg-white px-8 py-4 rounded-2xl font-bold text-black capitalize bg-lightGray'>SUBMIT</button>
+            <button type='submit' className='bg-white px-8 py-4  rounded-2xl font-bold text-black capitalize bg-lightGray mt-4 z-10'>SUBMIT</button>
         </form>
-        <div className="fad rounded-full w-60 h-60 absolute left-2/4 top-60 z-0">
-            
-            </div>
-    
-            <div className="fadi rounded-full w-60 h-60 absolute left-1/4 top-60 z-0">
-                
-                </div>
-    
+        <div className='flex flex-col items-center mt-80 z-10'>
+        <h1>Erbil, Iraq</h1>
+        <h1>fadimoayad99@yahoo.com</h1>
+        <h1>07508182944</h1>
         </div>
+
+        {/* <div className='flex flex-col items-center'>
+        <h1 className='z-10 mb-4'>OR</h1>
+        <hr className='p-4 w-1/2'/>
+        <div></div>
+        </div> */}
+        </div> 
+    
     )
 }
 
