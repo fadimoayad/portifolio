@@ -1,8 +1,11 @@
 import React from "react";
 import ContactUs from "./ContactUs";
+import f from './images/contactPage/f.pdf'
+import { faArrowDown } from "@fortawesome/free-solid-svg-icons";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 function Main(){
     return(
-      <div>
+      <div className="h-fit">
         <div className="flex relative h-screen w-full overflow-hidden" id="first">
         <div className="fadi lg:w-[400px] lg:h-[400px] rounded-full top-72 left-10 absolute z-0"></div>
         <div className="fad w-[700px] h-[700px] rounded-full -top-44 -right-44  absolute z-0"></div>
@@ -14,7 +17,8 @@ function Main(){
        <h1 className=" text-6xl font-normal mb-2 font-bold	z-10">Web Developer</h1>
        <h1 className=" text-lg font-normal mb-2 font-thin		z-10">Frontend Web Developer</h1>
         <div className="mt-8 z-20">
-      <a href="/ContactUs"  > <button className="border border-black	dark:border-white text-xl font-normal px-10 py-2" >Contact Me</button></a>
+        <a className=" hover:text-yellow-600" download={f} href={f}>  <button className="border border-black	dark:border-white text-xl font-normal px-10 py-2" >Download Resume</button></a>
+      {/* <a href="/ContactUs"  > <button className="border border-black	dark:border-white text-xl font-normal px-10 py-2" >Contact Me</button></a> */}
         </div>
       
        </div>
@@ -22,7 +26,8 @@ function Main(){
       
        </div>
        <div className="flex justify-center ">
-        <a href="#first" className="absolute bottom-20">down</a>
+        <a href="#first" className="absolute bottom-20"><FontAwesomeIcon icon={faArrowDown} bounce  size="xl" ></FontAwesomeIcon></a>
+        
        </div>
 
        <div className="flex">

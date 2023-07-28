@@ -1,41 +1,58 @@
-import React,{ useRef }  from 'react';
+import React,{ useRef, useState }  from 'react';
 import { Route, Routes, Link, Router, BrowserRouter } from 'react-router-dom';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faBars } from '@fortawesome/free-solid-svg-icons';
+import { faBars,faTimes} from '@fortawesome/free-solid-svg-icons';
 import Main from './Main';
 import ContactUs from './ContactUs';
 import About from './About';
-import f from './images/contactPage/f.pdf'
 import sun from './images/sun.png'
 import moon from './images/moon.png'
 
-
 function NavBar(props){
-    const navRef =useRef(null);
+   
+    const [open,setOpen]=useState(false);
 
-    const showNavBar = () => {
-        navRef.current.classList.toggle("responsive_nav")
+    const showToggle =()=>{
+        setOpen(!open);
     }
+
+
+ 
     return (
         <BrowserRouter>
-        
-        <nav className="flex pr-2 pl-8  gap-6 py-2 bg-zinc-900  dark:bg-lightGray text-white  dark:text-black
-         w-auto sticky top-0 z-30" ref={navRef}>
-        
-            <Link to="/" className=" hover:text-yellow-600 ">Home</Link>
-            <Link to="About" className=" hover:text-yellow-600" >About</Link>
+        <nav className="py-2 px-4 bg-zinc-900  dark:bg-lightGray text-white  dark:text-black
+         w-auto sticky top-0 z-30 drop-shadow-[770px,780px,60px,rgba(0,0,0,0.1)] drop-shadow-2xl " >
+
+        <div className='flex flex-col sm:flex-row md:items-center'>
+            <Link to="/" className=" hover:text-yellow-600 w-fit h-fit"><h1>Fadi</h1></Link>
+
+            <div className={`flex flex-col  dark:bg-lightGray bg-zinc-900  
+             pt-6 md:pt-0 -ml-4 pl-4 md:pl-0 pb-4 md:pb-0   md:flex-row  md:m-auto  gap-4 transtion-all duration-500 ${open ? 'top-8': 'hidden md:flex'}`}>
+            <Link to="About" className=" hover:text-yellow-500 " >About</Link>
+            <Link  className=" hover:text-yellow-600 ">Projects</Link>
             <Link to="ContactUs" className=" hover:text-yellow-600" >Contact</Link>
-            <a className=" hover:text-yellow-600" download={f} href={f}>Resume</a>
-          
-        <div onClick={props.handleTheme} className='flex gap-2 cursor-pointer'>
+            </div>
+       
+            <div onClick={props.handleTheme} className='cursor-pointer absolute mr-24 sm:mr-4 right-0  '>
         <img src={sun} className='h-6 w-6 hidden dark:block '/>
 
             <img src={moon} className='h-6 w-6 dark:hidden'/>         
-            </div>
+         </div>
 
-            <button className=' ml-auto  mt-1 lg:hidden ' onClick={showNavBar}>
+
+            <div className='  sm:hidden absolute right-0'>
+              <button onClick={showToggle  } >
+             <FontAwesomeIcon icon={open  ?faTimes: faBars}  className='w-5 h-5 mr-4' ></FontAwesomeIcon>
+              </button>
+              </div>
+
+        {/* <button className='  mt-1 sm:hidden ' onClick={showNavBar}>
         <FontAwesomeIcon icon={faBars} className='w-5 h-5'></FontAwesomeIcon>
-        </button>
+            </button>
+
+            <button className='mt-1 sm:hidden ' onClick={showNavBar}>
+        <FontAwesomeIcon icon={faTimes} className='w-5 h-5'></FontAwesomeIcon>
+            </button> */}
 
             {/* <div className='ml-auto flex gap-2 mr-2'>                      
         <a href='https://github.com/fadimoayad ' target="_blank">
@@ -71,8 +88,10 @@ function NavBar(props){
         </a>
 
         </div> */}
+    </div>
       
     </nav>
+   
        <Routes>
             <Route path='/' element={<Main />}></Route>
             <Route path="/ContactUs" element={<ContactUs />}></Route>
