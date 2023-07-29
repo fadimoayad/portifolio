@@ -22,7 +22,7 @@ function App() {
 
 
   return (
-    <div className="bg-lightGray dark:bg-black  dark:text-white text-black">    
+    <div className="bg-lightGray dark:bg-jaguar  dark:text-white text-black">    
       <NavBar handleTheme={handleTheme}/>
 
   

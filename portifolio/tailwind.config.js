@@ -11,7 +11,9 @@ module.exports = {
       "lightGray":'#D9D9D9',
       "azureBlue":'#37A2DE',
       'olive':'#748666',
-      'redShade':'#C72828'
+      'redShade':'#C72828',
+      'jaguar':'#181818'
+      
     },
     fontFamily: {
       'sans': ['Helvetica', 'Arial', 'sans-serif'],

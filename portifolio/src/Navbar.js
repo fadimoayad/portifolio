@@ -7,7 +7,7 @@ import ContactUs from './ContactUs';
 import About from './About';
 import sun from './images/sun.png'
 import moon from './images/moon.png'
-
+import Projects from './Projects';
 function NavBar(props){
    
     const [open,setOpen]=useState(false);
@@ -29,7 +29,7 @@ function NavBar(props){
             <div className={`flex flex-col  dark:bg-lightGray bg-zinc-900  
              pt-6 md:pt-0 -ml-4 pl-4 md:pl-0 pb-4 md:pb-0   md:flex-row  md:m-auto  gap-4 transtion-all duration-500 ${open ? 'top-8': 'hidden md:flex'}`}>
             <Link to="About" className=" hover:text-yellow-500 " >About</Link>
-            <Link  className=" hover:text-yellow-600 ">Projects</Link>
+            <Link  to="Projects" className=" hover:text-yellow-600 ">Projects</Link>
             <Link to="ContactUs" className=" hover:text-yellow-600" >Contact</Link>
             </div>
        
@@ -94,6 +94,7 @@ function NavBar(props){
    
        <Routes>
             <Route path='/' element={<Main />}></Route>
+            <Route path="/Projects" element={<Projects />}></Route>
             <Route path="/ContactUs" element={<ContactUs />}></Route>
             <Route path="/About" element={<About />}></Route>
         </Routes> 
