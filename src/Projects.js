@@ -28,14 +28,12 @@ function Projects() {
          </div>
        </div>  
 
-
-       <div className="card flex flex-col md:flex-row  w-4/5 md:w-3/5 h-80 md:h-72 shadow-2xl  ">
+    <a className=" flex flex-col md:flex-row  w-4/5 md:w-3/5 h-80 md:h-72 shadow-2xl  " href='https://endearing-arithmetic-8d667a.netlify.app/'>
          <img src={project} className='md:w-2/5 h-3/5 md:h-full '></img>
          <div className='bg-lightGray p-8 md:w-3/5 h-2/5 md:h-full rounded-tr-3xl rounded-br-3xl shadow-2xl h-full'>
          <h1 >Cross Road Restaurant</h1>
          </div>
-       </div>    
-   
+       </a>
     </div>
     </div>
     
