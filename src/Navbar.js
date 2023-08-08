@@ -33,14 +33,14 @@ function NavBar(props){
             <Link to="ContactUs" className=" hover:text-yellow-600" >Contact</Link>
             </div>
        
-            <div onClick={props.handleTheme} className='cursor-pointer absolute mr-24 sm:mr-4 right-0  '>
+            <div onClick={props.handleTheme} className='cursor-pointer absolute mr-24 md:mr-4 right-0  '>
         <img src={sun} className='h-6 w-6 hidden dark:block '/>
 
             <img src={moon} className='h-6 w-6 dark:hidden'/>         
          </div>
 
 
-            <div className='  sm:hidden absolute right-0'>
+            <div className='  md:hidden absolute right-0'>
               <button onClick={showToggle  } >
              <FontAwesomeIcon icon={open  ?faTimes: faBars}  className='w-5 h-5 mr-4' ></FontAwesomeIcon>
               </button>

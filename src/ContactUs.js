@@ -44,7 +44,7 @@ const form = useRef();
 
         <form className='flex flex-col items-center justify-center z-10 mb-14 ' ref={form} onSubmit={sendEmail}>
 
-            <h1 className='text-3xl lg:text-8xl lg:mt-14 mb-10 font-normal leading-[147px]'>CONTACT ME</h1>
+            <h1 className='text-3xl md:text-4xl md:mt-10 lg:text-8xl lg:mt-14 mb-10 font-normal leading-[147px]'>CONTACT ME</h1>
             <input type="text" name="user_name" placeholder='Your Name...'  
             className='placeholder:text-sm lg:placeholder:text-lg w-4/5 lg:w-3/5 rounded-xl m-2.5 p-2 lg:p-4 z-10 bg-lightGray' /> 
 
