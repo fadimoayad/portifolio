@@ -20,44 +20,54 @@ const form = useRef();
       });
   };
 
+
+
+
     return(
        
-        <div className="flex  relative dark:bg-black bg-lightGray h-full w-full overflow-hidden ">
-                   
-            <div className='bg-redShade absolute bg-opacity-80 z-0 w-[817px] h-[488px] top-80 left-32 blur-[78px] rounded-full overflow-hidden'> </div>  
+        <div className=" relative dark:bg-black bg-lightGray h-screen w-full overflow-hidden ">
 
-            <div className='bg-olive absolute bg-opacity-80 z-0 w-[717px] h-[388px] top-96 left-[480px] blur-[78px] rounded-full overflow-hidden'> </div>  
+          <div className='flex  justify-center '>
+  <div className='bg-redShade absolute bg-opacity-80 z-0 w-[450px] h-[300px] lg:w-[817px]
+   lg:h-[488px] -ml-40 mt-40  md:-ml-48 md:mt-52 blur-[78px] rounded-full overflow-hidden'> </div>  
 
-            <div className='ed absolute z-0 w-[664px] h-[400px] top-[230px] left-[690px] blur-[78px] rounded-full overflow-hidden'> </div>  
+  <div className='bg-olive absolute bg-opacity-80 z-0 w-[400px] h-[300px] lg:w-[717px] 
+  lg:h-[388px] -ml-60 mt-52 md:-ml-72 md:mt-52 lg:-ml-96 lg:mt-80 blur-[78px] rounded-full overflow-hidden'> </div>  
 
-            <div className='bg-azureBlue bg-opacity-80 absolute z-0 w-[544px] h-[290px] top-80 left-10 blur-[78px] rounded-full overflow-hidden'> </div>        
+  <div className='ed absolute z-0 w-[430px] h-[300px] lg:w-[664px] lg:h-[500px]  blur-[78px]
+   ml-[350px] mt-40 md:ml-[400px] md:mt-52 lg:ml-[500px] lg:mt-52 rounded-full overflow-hidden'> </div>  
+
+  <div className='bg-azureBlue bg-opacity-80 absolute z-0 w-[360px] h-[290px] lg:w-[544px]
+   lg:h-[290px] -ml-[500px] mt-52  lg:-ml-[700px] lg:mt-72  blur-[78px] rounded-full overflow-hidden'> </div>   
+
+  </div>
 
         <form className='flex flex-col items-center justify-center z-10 mb-14 ' ref={form} onSubmit={sendEmail}>
 
-            <h1 className='text-8xl mt-8 mb-10 font-normal leading-[147px]'>CONTACT ME</h1>
-            <input type="text" name="user_name" placeholder='Your Name...'  className='w-4/5 rounded-xl m-2.5 p-4 z-10 bg-lightGray' /*value={name}
-            onChange={(e)=> setName(e.target.value) }*//> 
+            <h1 className='text-3xl lg:text-8xl lg:mt-14 mb-10 font-normal leading-[147px]'>CONTACT ME</h1>
+            <input type="text" name="user_name" placeholder='Your Name...'  
+            className='placeholder:text-sm lg:placeholder:text-lg w-4/5 lg:w-3/5 rounded-xl m-2.5 p-2 lg:p-4 z-10 bg-lightGray' /> 
 
-            <input type="email" name="user_email" placeholder='Your Email...'  className='w-4/5 rounded-xl m-2.5 p-4 z-10 bg-lightGray' />
+            <input type="email" name="user_email" placeholder='Your Email...'  
+            className='placeholder:text-sm lg:placeholder:text-lg w-4/5 lg:w-3/5 rounded-xl m-2.5 p-2 lg:p-4  z-10 bg-lightGray' />
 
-            <textarea placeholder='Your Message...' name='message' className='w-4/5 rounded-2xl m-2.5 pb-36 pl-4 z-10 pt-4 bg-lightGray'></textarea>
+            <textarea placeholder='Your Message...' name='message' 
+            className='placeholder:text-sm lg:placeholder:text-lg w-4/5 lg:w-3/5 rounded-2xl m-2.5 md:pb-24 lg:pb-36 p-2 lg:p-4  z-10 pt-4 bg-lightGray'></textarea>
 
-            <button type='submit' className='bg-white px-8 py-4  rounded-2xl font-bold text-black capitalize bg-lightGray mt-4 z-10'>SUBMIT</button>
+            <button type='submit' className='bg-white px-7 lg:px-8 py-2 lg:py-4  rounded-2xl font-bold
+             text-black capitalize bg-lightGray mt-4 z-10'>SUBMIT</button>
         </form>
-        <div className='flex flex-col items-center mt-80 z-10'>
+       
+         
+        {/* <div className='flex flex-col items-center mt-80 z-10'>
         <h1>Erbil, Iraq</h1>
         <h1>fadimoayad99@yahoo.com</h1>
         <h1>07508182944</h1>
-        </div>
+        </div> */}
 
     
 
-<button data-collapse-toggle="navbar-default" type="button" class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-gray-500 rounded-lg md:hidden hover:bg-gray-100 focus:outline-none focus:ring-2 focus:ring-gray-200 dark:text-gray-400 dark:hover:bg-gray-700 dark:focus:ring-gray-600" aria-controls="navbar-default" aria-expanded="false">
         
-        <svg class="w-5 h-5" aria-hidden="true" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 17 14">
-            <path stroke="currentColor" stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M1 1h15M1 7h15M1 13h15"/>
-        </svg>
-    </button>
             {/* <div className='ml-auto flex gap-2 mr-2'>                      
         <a href='https://github.com/fadimoayad ' target="_blank">
                     <svg  className='cursor-pointer' width="25px" height="25px" viewBox="0 0 20 20" version="1.1" xmlns="http://www.w3.org/2000/svg" xlink="http://www.w3.org/1999/xlink">
